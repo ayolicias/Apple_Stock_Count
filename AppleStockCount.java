@@ -14,10 +14,12 @@ public static void main(String[] args){
     else{
         StringBuilder message = new StringBuilder();
         message.append("You have bought ");
+        message.append(qty);
         //check if it is a multiple of dozens and returns the amount
+
         if(qty % 12 == 0){
-            int dozen = qty / 12;
-            message.append(dozen + " dozen");
+        int dozen = qty / 12;
+        message.append(dozen + " dozens");
         }
         message.append(" of apple");
         if (qty > 1) {
