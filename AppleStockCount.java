@@ -6,6 +6,10 @@ public static void main(String[] args){
         return;
     }
         int qty = Integer.parseInt(args[0]);
+        if (args.length ==1){
+            System.out.println("Please give me the Price");
+            return;
+        }
         double cost = Double.parseDouble(args[1]);
         double total = qty * cost;
         if(qty < 1){
