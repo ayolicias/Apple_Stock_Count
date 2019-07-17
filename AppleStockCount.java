@@ -14,17 +14,29 @@ public static void main(String[] args){
     else{
         StringBuilder message = new StringBuilder();
         message.append("You have bought ");
-        message.append(qty);
         //check if it is a multiple of dozens and returns the amount
 
         if(qty % 12 == 0){
-        int dozen = qty / 12;
-        message.append(dozen + " dozens");
+            int dozen = qty / 12;
+            message.append(dozen + " dozen");
+
+        // how many dozens I have if more than one add an s
+            if(dozen > 1){
+            message.append("s");
+            }
+         message.append(" of apples");
+
+            }
+         else {
+            message.append(qty);
+            message.append(" apple");
+            if (qty > 1) {
+                message.append("s");
+            }
         }
-        message.append(" of apple");
-        if (qty > 1) {
-        message.append("s");
-      }
+
+        
+
         message.append(" for a total cost of ");
         message.append(total);
         message.append(".");
